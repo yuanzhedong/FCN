@@ -1,29 +1,36 @@
 ## Fully Convolutional Networks for Semantic Segmentation
 
-##### CNN for image classification(input: image, output: class)
+### Idea of Semantic Segmentation
+- Recognizing, understanding what's in the image in pixel
+level. 
+![Alt Image Text](./img/ss.png "")
+
+### CNN for image classification(input: image, output: class)
+- We loose spatial info when connent convolution layer with fully connected layer.
 ![Alt Image Text](./img/cnn.png "")
 
-##### FCN for image semantic classification(input: image, output: image)
+### FCN for image semantic classification(input: image, output: image)
 ![Alt Image Text](./img/fcn.png "Optional Title")
 
-##### Compare between CNN for Image Classification and FCN for Semantic Segmentation:
+### Compare between CNN for Image Classification and FCN for Semantic Segmentation:
+
+- Instead of flattern the output of `conv2D` into `Dense`, FCN will plugin another `conv2D` and then transpose the output into the same size of the original input.
 ![Alt Image Text](./img/cnn-fcn.png "Optional Title")
 
-#####  Adapting classifiers for dense prediction
+###  Adapting classifiers for dense prediction
 
+- FCN can adapt the pre-trained model from CNN
 - Fully connected layers can also be viewed as convolutions with kernels that cover their entire input regions.
-
 - [how to convert](http://cs231n.github.io/convolutional-networks/#convert)
 
-##### Loss Function
-- Use `multi-class cross entropy` as loss function. assigning a class to each of our output pixels so this is a classification problem. Each pixel will have a `n-dimentional` vector, `n` is the number of class.
 
-##### Upsampling and Transpose convolution layer
+
+### Upsampling and Transpose convolution layer
 
 - Upsampling the output of a convnet to the original image resolution.
 ![Alt Image Text](./img/transposeclayer.png "Optional Title")
 
-#### Enhance resolution 
+### Enhance resolution 
 - Interpolate with activations from prev layers.
 
 ![Alt Image Text](./img/skip.png "Optional Title")
@@ -42,4 +49,6 @@ comment
 - `https://computing.ece.vt.edu/~f15ece6504/slides/L13_FCN.pdf`
 
 - `https://zh.gluon.ai/chapter_computer-vision/fcn.html`
+
+- `http://www.cs.toronto.edu/~tingwuwang/semantic_segmentation.pdf`
 [//]: # (This may be the most platform independent comment)
