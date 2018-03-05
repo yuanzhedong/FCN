@@ -47,6 +47,8 @@ help with training when connect current layer
 
 ![Alt Image Text](./img/skip.png "Optional Title")
 
+### Result
+![Alt Image Text](./img/res.png "Optional Title")
 ### Questions & TODOs
 - Metrics and Results(TODO)
 - Post process(CRF)
@@ -69,7 +71,7 @@ comment
 - `http://www.cs.toronto.edu/~tingwuwang/semantic_segmentation.pdf`
 [//]: # (This may be the most platform independent comment)
 
-### Notes from coworkers
+### Notes from teamates
 ###### Ming
 
 - why skip is usefule. (Ming)
@@ -93,3 +95,4 @@ comment
 	- proposals, object detection, prefilter a smaller region
 
 ##### David
+
