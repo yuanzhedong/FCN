@@ -1,30 +1,27 @@
 ## Fully Convolutional Networks for Semantic Segmentation
 
 ##### CNN for image classification(input: image, output: class)
-![Alt Image Text](/Users/ydong/Desktop/FCN/p1.png "")
-
-
-
+![Alt Image Text](./img/cnn.png "")
 
 ##### FCN for image semantic classification(input: image, output: image)
-![Alt Image Text](/Users/ydong/Desktop/FCN/p2.png "Optional Title")
+![Alt Image Text](./img/fcn.png "Optional Title")
 
 ##### Compare between CNN for Image Classification and FCN for Semantic Segmentation:
-![Alt Image Text](/Users/ydong/Desktop/FCN/p3.png "Optional Title")
+![Alt Image Text](./img/cnn-fcn.png "Optional Title")
 
 
 ##### Loss Function
-Use `multi-class cross entropy` as loss function. assigning a class to each of our output pixels so this is a classification problem. Each pixel will have a `n-dimentional` vector, `n` is the number of class.
+- Use `multi-class cross entropy` as loss function. assigning a class to each of our output pixels so this is a classification problem. Each pixel will have a `n-dimentional` vector, `n` is the number of class.
 
 ##### Upsampling and Transpose convolution layer
 
-upsampling the output of a convnet to the original image resolution.
-![Alt Image Text](/Users/ydong/Desktop/FCN/transposeclayer.png "Optional Title")
+- Upsampling the output of a convnet to the original image resolution.
+![Alt Image Text](./img/transposeclayer.png "Optional Title")
 
 #### Enhance resolution 
-Interpolate with activations from prev layers.
+- Interpolate with activations from prev layers.
 
-![Alt Image Text](/Users/ydong/Desktop/FCN/skip.png "Optional Title")
+![Alt Image Text](./img/skip.png "Optional Title")
 
 ##### References
 
