@@ -5,8 +5,14 @@
 level. 
 ![Alt Image Text](./img/ss.png "")
 
+<!---
+spatial output
+arbitratry sized input
+trainable upsampling
+
+-->
 ### CNN for image classification(input: image, output: class)
-- We loose spatial info when connent convolution layer with fully connected layer.
+- We lose spatial info when connent convolution layer with fully connected layer.
 ![Alt Image Text](./img/cnn.png "")
 
 ### FCN for image semantic classification(input: image, output: image)
@@ -31,9 +37,19 @@ level.
 ![Alt Image Text](./img/transposeclayer.png "Optional Title")
 
 ### Enhance resolution 
-- Interpolate with activations from prev layers.
+- Interpolate with prev layers.
+
+<!---
+how skip can be helpful
+Resnet
+help with training when connect current layer 
+--->
 
 ![Alt Image Text](./img/skip.png "Optional Title")
+
+### Questions & TODOs
+- Metrics and Results(TODO)
+- Post process(CRF)
 
 ##### References
 <!---
@@ -52,3 +68,28 @@ comment
 
 - `http://www.cs.toronto.edu/~tingwuwang/semantic_segmentation.pdf`
 [//]: # (This may be the most platform independent comment)
+
+### Notes from coworkers
+###### Ming
+
+- why skip is usefule. (Ming)
+	- easy to train (ResNet)
+	- keep spacial info
+- Try different loss function. (Ming)
+
+##### Lin
+
+- why it's faster in training?(less param to train)
+- Shift-and-stich?
+- how will the context influence the output?
+	- context? complex=>background, image contains a lot classes
+	- context can affect for classification a lot. Same as segmentation.
+- how will the __depth__ and __normal__ affect the segmentation
+	- pixels on the same depth belong to the same class
+
+	
+- end-to-end
+	- super pixel?
+	- proposals, object detection, prefilter a smaller region
+
+##### David
