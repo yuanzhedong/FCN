@@ -50,7 +50,7 @@ help with training when connect current layer
 ### Result
 ![Alt Image Text](./img/res.png "Optional Title")
 ### Questions & TODOs
-- Metrics and Results(TODO)
+- Metrics of Segment Segmentation (pixel acc, mean IU)
 - Post process(CRF)
 
 ##### References
@@ -96,3 +96,14 @@ comment
 
 ##### David
 
+- padding size is fixed with 100?
+- arbitrary size: conv and pool do not care about image size
+	- `outputsize = (inputsize-kernelsize)/stride +1`
+- dilated (atrous) convolution: use different type of kernals
+- transfer learning
+- why 1x1 conv at the end (4096 * 4096)
+
+##### Fu
+
+- deep jet
+- patch sampling(crop the image) vs. full image. Patch sampling will loss context.
